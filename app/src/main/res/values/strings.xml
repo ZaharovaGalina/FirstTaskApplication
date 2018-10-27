@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirstTaskApplication</string>
+    <string name="press_me">Нажми меня</string>
+    <string name="input_text">Введите текст</string>
+</resources>
