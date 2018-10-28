@@ -1,5 +1,7 @@
 package ru.skblab.firsttaskapplication;
 
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,7 +19,12 @@ public class ViewActivity extends AppCompatActivity {
     private View.OnClickListener onClickViewListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            //
+
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            intent.putExtra(SearchManager.QUERY, textView.getText().toString());
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
         }
     };
 
